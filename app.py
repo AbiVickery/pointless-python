@@ -1,7 +1,7 @@
 print('Hello world')
 
 
-input(
-    if expression:
-        pass
-)
+# input(
+#     if expression: True
+#         pass
+# )
