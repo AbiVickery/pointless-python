@@ -22,7 +22,7 @@ def bubbleSort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
 # Driver code to test above
-arr = [23, 99, 76, 12, 38, 11, 65, 139, 0]
+arr = [5, 3, 8, 7, 6, 7, 52, 42, 1, 2]
 
 bubbleSort(arr)
 
