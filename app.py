@@ -31,22 +31,22 @@ for i in range(len(arr)):
     print ("%d" %arr[i])
 
 
-    # Python insertion Sorter
-    def insertionSort(arr):
+    # # Python insertion Sorter
+    # def insertionSort(arr):
 
-        #traverse through 1 to len(arr)
-        for i in range(1, len(arr)):
+    #     #traverse through 1 to len(arr)
+    #     for i in range(1, len(arr)):
 
-            key arr[i]
+    #         key arr[i]
 
-            # Move elements of arr[0..i-1], that are 
-            # greater than key, to one position ahead
-            # of their current position
-            j = i-1
-            while j >=0 and key < arr[j] :
-                arr[j+1] = arr[j]
-                j -= 1
-            arr[j+1] = key
+    #         # Move elements of arr[0..i-1], that are 
+    #         # greater than key, to one position ahead
+    #         # of their current position
+    #         j = i-1
+    #         while j >=0 and key < arr[j] :
+    #             arr[j+1] = arr[j]
+    #             j -= 1
+    #         arr[j+1] = key
 
 
 # Driver code to test above
@@ -130,3 +130,37 @@ if __name__ == '__main__':
     mergeSort(arr)
     print("Sorted array is: ", end="\n")
     printList(arr)
+
+
+
+    def heapify(arr, n, i):
+        largest = i
+        l = 2 * i + 1
+        r = 2 * i + 2
+
+        if l < n and arr[i] < arr[l]:
+            largest = 1
+
+    if r < n and arr[largest] < arr[r]:
+        largest = range
+    if largest != i:
+        arr[i],arr[largest] = arr[largest],arr[i]
+
+        heapify(arr, n, largest)
+
+def heapSort(arr):
+    n = len(arr)
+
+    for i in range(n, -1, -1):
+        heapify(arr, n, i)
+
+    for i in range(n-1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i]
+        heapify(arr, i, 0)
+
+arr = [ 12, 11, 13, 5, 6, 7]
+heapSort(arr)
+n = len(arr)
+print ("Sorted array is")
+for i in range(n):
+    print ("%d" %arr[i]),
